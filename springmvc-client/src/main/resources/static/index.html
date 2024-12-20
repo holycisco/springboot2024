@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Room(JS)</title>
+		<!-- HTML No Cache -->
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+		<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+		<!-- 引用 css -->
+		<link rel="stylesheet" href="/css/room.css?" + Math.random() + "">
+	</head>
+	<body>
+		<!-- 房間列表 -->
+	    <h2>Room List</h2>
+	    <ul id="roomList"></ul>
+	    
+	    <!-- 回應訊息 -->
+	    回應訊息: <div id="resultMessage"></div>
+	    
+	    <!-- 新增房間 -->
+	    <h2>Room Add</h2>
+	    <div>
+	    	會議室ID: <input type="text" id="roomId" placeholder="請輸入會議室ID" /> <p />
+	    	會議室名稱: <input type="text" id="roomName" placeholder="請輸入會議室名稱" /> <p />
+	    	會議室人數: <input type="number" id="roomSize" placeholder="請輸入會議室人數" /> <p />
+	    	<button onclick="addRoom()">新增房間</button>
+	    </div>
+	    
+	    <!-- 修改房間小視窗(Modal) -->
+	    <div class="modal-overlay" id="editModal">
+	    	<div class="modal">
+	    		<span class="close-btn" onclick="closeModal()">X</span>
+	    		<h2>Room Edit</h2>
+	    		ID: <input type="text" id="editRoomId" style="width: 50px" readonly />
+	    		名稱: <input type="text" id="editRoomName" style="width: 100px" /> 
+	    		人數: <input type="number" id="editRoomSize" style="width: 50px" />
+	    		<button onclick="editRoom()">修改房間</button> 
+	    	</div>
+	    </div>
+	    
+	    <!-- 引用 js -->
+		<script type="text/javascript" src="/js/room.js?" + Math.random() + ""></script>
+	</body>
+</html>
